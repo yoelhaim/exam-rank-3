@@ -65,7 +65,8 @@ int ft_print(char *format, ...)
                 next = va_arg(list, void *);
             check(*format, next, &i);
         }
-        i++;
+        else
+            i += ft_putchar(*format);
         format++;
     }
 
